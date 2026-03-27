@@ -6,7 +6,7 @@ source "https://rubygems.org"
 
 # Use the Jekyll version you found earlier (likely 3.9 or 4.x)
 gem "jekyll", "4.2.2"
-gem "webrick"
+#gem "webrick"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
