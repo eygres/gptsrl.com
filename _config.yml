@@ -1,0 +1,77 @@
+# Site Settings
+title: "GPT Growth Lab"
+description: "Full-service Amazon agency with proprietary software. We launch, optimize, and scale your Amazon business across markets."
+url: "https://gptsrl.com"
+baseurl: ""
+
+# Author/Organization
+author:
+  name: "GPT Growth Lab"
+  email: "info@gptsrl.com"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
+  - LICENSE
+  - .git
+  - .gitignore
+  - _archive
+
+# Include files
+include:
+  - _docs
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO Settings
+lang: en_US
+tagline: "Launch, Grow & Scale on Amazon"
+keywords: "Amazon agency, Amazon seller services, Amazon growth partner, sell on Amazon, Amazon account management"
+
+# Social
+social:
+  name: GPT Growth Lab
+  links:
+    - https://github.com/eygres/gptsrl.com
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Collections (if needed in future)
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+# Sass/SCSS
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Timezone
+timezone: UTC
+
+# Encoding
+encoding: UTF-8
