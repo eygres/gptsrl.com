@@ -4,9 +4,32 @@ Jekyll site for gptsrl.com, deployed via Cloudflare Pages.
 
 ## Running locally
 
-### First time
+### Option A — Persistent container (recommended)
 
-From the project root, run:
+Creates a named container that **stays around after stopping**, so you can restart it without reinstalling dependencies.
+
+**First run:**
+
+```bash
+docker run --name gptsrl-jekyll \
+  --platform linux/amd64 \
+  -v "$PWD:/srv/jekyll" \
+  -p 4000:4000 \
+  jekyll/jekyll:latest \
+  sh -c "bundle install && bundle exec jekyll serve --force_polling --host 0.0.0.0"
+```
+
+**Subsequent runs:**
+
+```bash
+docker start -a gptsrl-jekyll
+```
+
+Or from Docker Desktop: open the **Containers** tab, find `gptsrl-jekyll`, and click the play button.
+
+### Option B — Throwaway container
+
+Adds `--rm`, which **automatically deletes the container on stop**. Useful for a clean one-off run; runs `bundle install` every time.
 
 ```bash
 docker run --rm \
@@ -17,27 +40,17 @@ docker run --rm \
   sh -c "bundle install && bundle exec jekyll serve --force_polling --host 0.0.0.0"
 ```
 
+---
+
 Open [http://localhost:4000](http://localhost:4000).
 
 > Code changes are picked up automatically — just save and refresh the browser.
 
-### Reusing an existing container
-
-**From the terminal:**
-
-```bash
-docker start -a <container-name>
-```
-
-To find the container name:
+To list all containers (including stopped ones):
 
 ```bash
 docker ps -a
 ```
-
-**From Docker Desktop:**
-
-Open Docker Desktop, go to the **Containers** tab, find the container, and click the play button to start it. Then open [http://localhost:4000](http://localhost:4000).
 
 ## Branches
 
