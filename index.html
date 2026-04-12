@@ -163,14 +163,18 @@
 
   <style>
     :root {
-      --primary-gold: #FFD600;
-      --primary-gold-dark: #ccb000;
-      --primary-blue: #2B6CB0;
-      --primary-blue-dark: #215387;
-      --primary-blue-deeper: #1a3a6b;
-      --text-light: #f5f5f5;
-      --text-muted-light: #c0c8d0;
-      --section-alt: #215387;
+      --primary-gold: #F5A623;       /* amber — CTA buttons */
+      --primary-gold-dark: #d4891a;  /* amber hover */
+      --accent: #00C49A;             /* emerald — icons/labels on DARK backgrounds */
+      --accent-dark: #009e7a;        /* emerald hover on dark */
+      --accent-on-light: #00704A;    /* dark emerald for text on white/light bg — 5.65:1 on white */
+      --accent-on-light-dark: #005a3b; /* hover */
+      --primary-blue: #0D1F35;       /* deep midnight navy — dark section bg */
+      --primary-blue-dark: #091628;  /* deeper navy */
+      --primary-blue-deeper: #060e1c;/* footer */
+      --text-light: #f0f6f4;
+      --text-muted-light: #8facc0;
+      --section-alt: #0a1a2e;
     }
 
     * { box-sizing: border-box; }
@@ -189,7 +193,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 3px solid var(--primary-blue);
+      border-bottom: 3px solid var(--accent);
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .navbar-brand {
@@ -198,7 +202,7 @@
       letter-spacing: -0.5px;
       color: #1A202C !important;
     }
-    .navbar-brand span { color: var(--primary-blue); }
+    .navbar-brand span { color: var(--accent-on-light); }
     .nav-link {
       color: #5A5A5A !important;
       font-weight: 500;
@@ -206,8 +210,8 @@
       padding: 0.4rem 0.9rem !important;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--primary-blue) !important; }
-    .navbar-toggler { border-color: var(--primary-blue); }
+    .nav-link:hover { color: var(--accent-on-light) !important; }
+    .navbar-toggler { border-color: var(--accent-on-light); }
     .navbar-toggler-icon { filter: none; }
     .btn-nav-cta {
       background: var(--primary-gold);
@@ -222,7 +226,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 60%, #1a3a6b 100%);
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 60%, #040c18 100%);
       padding: 100px 0 90px;
       position: relative;
       overflow: hidden;
@@ -231,7 +235,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD600' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300C49A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
       pointer-events: none;
     }
     .hero-eyebrow {
@@ -239,7 +243,7 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--primary-gold);
+      color: var(--accent);
       margin-bottom: 1.2rem;
     }
     .hero h1 {
@@ -253,7 +257,7 @@
     .hero-sub {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--primary-gold);
+      color: var(--accent);
       margin-bottom: 1rem;
     }
     .hero-usp {
@@ -287,17 +291,17 @@
       display: inline-block;
       transition: all 0.2s;
     }
-    .btn-outline-cta:hover { background: #fff; color: var(--primary-blue); }
+    .btn-outline-cta:hover { background: #fff; color: var(--primary-blue-dark); }
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(255,214,0,0.12);
-      border: 1px solid rgba(255,214,0,0.3);
+      background: rgba(0,196,154,0.12);
+      border: 1px solid rgba(0,196,154,0.3);
       border-radius: 40px;
       padding: 0.4rem 1rem;
       font-size: 0.82rem;
-      color: var(--primary-gold);
+      color: var(--accent);
       font-weight: 600;
       margin-bottom: 2rem;
     }
@@ -324,14 +328,14 @@
       gap: 1rem;
     }
     .hero-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,214,0,0.2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,196,154,0.25);
       border-radius: 12px;
       padding: 1.2rem 1.5rem;
       color: #fff;
     }
-    .hero-card .icon { font-size: 1.8rem; color: var(--primary-gold); margin-bottom: 0.5rem; }
-    .hero-card h6 { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .hero-card .icon { font-size: 1.8rem; color: var(--accent); margin-bottom: 0.5rem; }
+    .hero-card .card-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; color: #fff; }
     .hero-card p { font-size: 0.82rem; color: var(--text-muted-light); margin: 0; }
 
     /* ── TRUST BAR ── */
@@ -362,7 +366,7 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--primary-blue);
+      color: var(--accent-on-light);
       margin-bottom: 0.6rem;
     }
     .section-title {
@@ -375,7 +379,7 @@
     .divider-orange {
       width: 56px;
       height: 4px;
-      background: var(--primary-blue);
+      background: var(--accent);
       border-radius: 2px;
       margin: 1rem 0 1.5rem;
     }
@@ -429,17 +433,17 @@
     }
     .tech-card .tc-icon {
       width: 52px; height: 52px;
-      background: rgba(255,214,0,0.2);
+      background: rgba(0,196,154,0.15);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
-      color: var(--primary-gold);
+      color: var(--accent);
       margin-bottom: 1rem;
     }
-    .tech-card h6 { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
+    .tech-card h3 { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
     .tech-card p { color: var(--text-muted-light); font-size: 0.9rem; margin: 0; }
     .tech-main-copy { color: var(--text-muted-light); font-size: 1rem; line-height: 1.8; }
-    .tech-main-copy strong { color: var(--primary-gold); }
+    .tech-main-copy strong { color: var(--accent); }
 
     /* ── SERVICES ── */
     .services-section { padding: 90px 0; background: #fff; }
@@ -457,32 +461,32 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 4px;
-      background: var(--primary-gold);
+      background: var(--accent);
       transform: scaleX(0);
       transition: transform 0.3s;
       transform-origin: left;
     }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: rgba(43,108,176,0.3); transform: translateY(-4px); }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: rgba(0,196,154,0.35); transform: translateY(-4px); }
     .service-num {
       font-size: 2.5rem;
       font-weight: 900;
-      color: rgba(43,108,176,0.15);
+      color: rgba(0,112,74,0.70);
       line-height: 1;
       margin-bottom: 0.5rem;
     }
-    .service-card h5 { font-weight: 800; font-size: 1.1rem; color: #1A202C; margin-bottom: 0.5rem; }
+    .service-card h3 { font-weight: 800; font-size: 1.1rem; color: #1A202C; margin-bottom: 0.5rem; }
     .service-card p { font-size: 0.93rem; color: #555; margin-bottom: 1rem; }
     .service-link {
       font-size: 0.88rem;
       font-weight: 700;
-      color: var(--primary-blue);
+      color: var(--accent-on-light);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
     }
-    .service-link:hover { color: var(--primary-blue-dark); text-decoration: underline; }
+    .service-link:hover { color: var(--accent-on-light-dark); text-decoration: underline; }
 
     /* ── APPROACH ── */
     .approach-section {
@@ -504,7 +508,7 @@
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 1.5rem;
     }
-    .step-card h5 { color: #fff; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.6rem; }
+    .step-card h3 { color: #fff; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.6rem; }
     .step-card p { color: var(--text-muted-light); font-size: 0.95rem; }
     .step-connector {
       position: absolute;
@@ -517,7 +521,7 @@
     }
 
     /* ── WHY US ── */
-    .whyus-section { padding: 90px 0; background: #EDF2F7; }
+    .whyus-section { padding: 90px 0; background: #F2FBF8; }
     .whyus-item {
       display: flex;
       gap: 1.2rem;
@@ -532,11 +536,11 @@
     .whyus-item:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
     .whyus-icon {
       width: 46px; height: 46px;
-      background: rgba(43,108,176,0.1);
+      background: rgba(0,112,74,0.1);
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
-      color: var(--primary-blue);
+      color: var(--accent-on-light);
       flex-shrink: 0;
     }
     .whyus-item h6 { font-weight: 700; font-size: 1rem; color: #1A202C; margin-bottom: 0.2rem; }
@@ -567,9 +571,9 @@
       height: 100%;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .proof-card:hover { border-color: var(--primary-gold); transform: translateY(-4px); }
-    .proof-icon { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 1rem; }
-    .proof-card h5 { color: #fff; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .proof-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .proof-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
+    .proof-card h3 { color: #fff; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.5rem; }
     .proof-card p { color: var(--text-muted-light); font-size: 0.9rem; margin: 0; }
     .testimonial-card {
       background: rgba(255,255,255,0.08);
@@ -580,7 +584,7 @@
     }
     .testimonial-card .quote-mark {
       font-size: 4rem;
-      color: var(--primary-gold);
+      color: var(--accent);
       line-height: 1;
       font-family: Georgia, serif;
       opacity: 0.4;
@@ -595,13 +599,13 @@
       margin: 1.5rem 0 1rem;
       line-height: 1.75;
     }
-    .testimonial-card .author { font-size: 0.88rem; font-weight: 700; color: var(--primary-gold); }
+    .testimonial-card .author { font-size: 0.88rem; font-weight: 700; color: var(--accent); }
     .testimonial-card .role { font-size: 0.82rem; color: #aaa; }
     .stars { color: var(--primary-gold); font-size: 0.9rem; margin-bottom: 0.5rem; }
 
     /* ── FINAL CTA ── */
     .cta-section {
-      background: linear-gradient(135deg, #FFD600 0%, #ccb000 100%);
+      background: linear-gradient(135deg, #F5A623 0%, #d4891a 100%);
       padding: 100px 0;
       text-align: center;
     }
@@ -649,7 +653,7 @@
     }
     .footer-brand { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 0.6rem; }
     .footer-brand span { color: var(--primary-gold); }
-    footer h6 { color: #fff; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
+    footer h3 { color: #fff; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
     footer a { color: #aaa; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; transition: color 0.2s; }
     footer a:hover { color: var(--primary-gold); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2.5rem; padding-top: 1.5rem; font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
@@ -699,7 +703,7 @@
       font-weight: 600;
     }
     .compare-table .icon-bad { color: #dc3545; margin-right: 0.3rem; }
-    .compare-table .icon-good { color: var(--primary-blue); margin-right: 0.3rem; }
+    .compare-table .icon-good { color: var(--accent-on-light); margin-right: 0.3rem; }
 
     /* ── FAQ ── */
     .faq-section { padding: 90px 0; background: #fff; }
@@ -728,7 +732,7 @@
       transition: background 0.2s;
     }
     .faq-question:hover { background: #fafafa; }
-    .faq-question.active { color: var(--primary-blue); background: #EBF4FF; }
+    .faq-question.active { color: var(--accent-on-light); background: #E8FAF5; }
     .faq-question .faq-icon { font-size: 1.1rem; flex-shrink: 0; transition: transform 0.25s; }
     .faq-question.active .faq-icon { transform: rotate(45deg); }
     .faq-answer {
@@ -764,7 +768,7 @@
       background: rgba(255,255,255,0.15);
       border-color: var(--primary-gold);
       color: #fff;
-      box-shadow: 0 0 0 3px rgba(255,214,0,0.2);
+      box-shadow: 0 0 0 3px rgba(0,196,154,0.2);
     }
     .form-select option { background: #1a1a1a; color: #fff; }
     .btn-submit {
@@ -842,11 +846,129 @@
       font-size: 0.78rem;
     }
 
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.10s; }
+    .reveal-d2 { transition-delay: 0.20s; }
+    .reveal-d3 { transition-delay: 0.30s; }
+    .reveal-d4 { transition-delay: 0.40s; }
+
+    /* ── HERO STAT CARDS ── */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin-top: 2.4rem;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 10px;
+      padding: 1rem 0.8rem;
+      text-align: center;
+    }
+    .stat-card .snum {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+    }
+    .stat-card .slbl {
+      font-size: 0.72rem;
+      color: var(--text-muted-light);
+      margin-top: 0.3rem;
+      display: block;
+      line-height: 1.3;
+    }
+
+    /* ── MID-PAGE CTA BAND ── */
+    .cta-band {
+      background: var(--primary-gold);
+      padding: 52px 0;
+    }
+    .cta-band .band-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .cta-band h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+      font-weight: 900;
+      color: #111;
+      margin: 0 0 0.25rem;
+    }
+    .cta-band .band-sub {
+      color: rgba(0,0,0,0.8);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .cta-band .btn-band-cta {
+      background: var(--primary-blue-dark);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      border-radius: 0;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .cta-band .btn-band-cta:hover { background: #000; color: #fff; transform: translateY(-2px); }
+
+    /* ── CHECK CIRCLES (form section) ── */
+    .check-circle {
+      width: 40px; height: 40px;
+      background: rgba(255,214,0,0.15);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── URGENCY BOX ── */
+    .urgency-box {
+      margin-top: 2rem;
+      padding: 1.2rem 1.5rem;
+      background: rgba(255,214,0,0.08);
+      border: 1px solid rgba(255,214,0,0.3);
+      border-radius: 10px;
+    }
+
+    /* ── PROOF CALLOUT (inside results) ── */
+    .proof-callout {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,214,0,0.2);
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .proof-callout .pc-num {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--primary-gold);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .proof-callout .pc-label { color: var(--text-muted-light); font-size: 0.95rem; }
+
     @media (max-width: 768px) {
       .hero { padding: 70px 0 60px; }
-      .hero-stats { gap: 1.2rem; }
+      .hero-stats-grid { grid-template-columns: repeat(3,1fr); gap: 0.5rem; }
+      .stat-card .snum { font-size: 1.6rem; }
       .step-connector { display: none; }
       .cta-section { padding: 70px 0; }
+      .cta-band .band-inner { flex-direction: column; text-align: center; }
+      .cta-band .btn-band-cta { width: 100%; text-align: center; }
     }
   </style>
 </head>
@@ -872,7 +994,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
-        <!--<li class="nav-item"><a class="nav-link" href="#approach">Our Approach</a></li>-->
+        <li class="nav-item"><a class="nav-link" href="#approach">Our Approach</a></li>
         <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         <li class="nav-item"><a class="nav-link btn-nav-cta" href="#contact">Free Growth Roadmap</a></li>
@@ -881,6 +1003,7 @@
   </div>
 </nav>
 
+<main>
 <!-- ══ HERO ══ -->
 <section class="hero">
   <div class="container">
@@ -902,18 +1025,18 @@
           <a href="#contact" class="btn-primary-cta">Get Your Free AI Audit</a>
           <a href="#technology" class="btn-outline-cta">See the Technology</a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="num">50+</div>
-            <div class="lbl">Brands Launched</div>
+        <div class="hero-stats-grid">
+          <div class="stat-card reveal reveal-d1">
+            <span class="snum">50+</span>
+            <span class="slbl">Brands Launched</span>
           </div>
-          <div class="hero-stat">
-            <div class="num">12+</div>
-            <div class="lbl">Markets Covered</div>
+          <div class="stat-card reveal reveal-d2">
+            <span class="snum">12+</span>
+            <span class="slbl">Markets Covered</span>
           </div>
-          <div class="hero-stat">
-            <div class="num">3.8×</div>
-            <div class="lbl">Avg. Revenue Growth</div>
+          <div class="stat-card reveal reveal-d3">
+            <span class="snum">3.8×</span>
+            <span class="slbl">Avg. Revenue Growth</span>
           </div>
         </div>
       </div>
@@ -921,17 +1044,17 @@
         <div class="hero-visual">
           <div class="hero-card">
             <div class="icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
-            <h6>Full Turnkey Launch</h6>
+            <p class="card-title">Full Turnkey Launch</p>
             <p>From product to profitable business — we do everything.</p>
           </div>
           <div class="hero-card">
             <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <h6>AI-Powered Listing Engine</h6>
+            <p class="card-title">AI-Powered Listing Engine</p>
             <p>Multilingual SEO content at scale — generated by our proprietary AI platform.</p>
           </div>
           <div class="hero-card">
             <div class="icon"><i class="bi bi-megaphone-fill"></i></div>
-            <h6>Profitable Advertising</h6>
+            <p class="card-title">Profitable Advertising</p>
             <p>Lower ACoS. Higher ROAS. Predictable, scalable growth.</p>
           </div>
         </div>
@@ -957,7 +1080,7 @@
 <section class="problem-section">
   <div class="container">
     <div class="row g-5 align-items-center">
-      <div class="col-lg-6">
+      <div class="col-lg-6 reveal">
         <div class="section-label">The Complexity Gap</div>
         <h2 class="section-title">Amazon's Algorithm Is Evolving Faster Than Your Team Can Type</h2>
         <div class="divider-orange"></div>
@@ -969,7 +1092,7 @@
           <span style="color:var(--primary-gold)">Every listing. Every keyword. Every bid.</span>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 reveal reveal-d2">
         <ul class="problem-icon-list">
           <li>
             <i class="bi bi-x-circle-fill"></i>
@@ -1016,7 +1139,7 @@
 <section class="tech-section" id="technology">
   <div class="container">
     <div class="row g-5 align-items-center">
-      <div class="col-lg-5">
+      <div class="col-lg-5 reveal">
         <div class="section-label" style="color:var(--primary-gold)">The Unfair Advantage</div>
         <h2 class="section-title light">AI Platform Built to Outperform Human Teams</h2>
         <div class="divider-orange"></div>
@@ -1028,33 +1151,33 @@
         </p>
         <a href="#contact" class="btn-primary-cta mt-3">See the AI Engine in Action</a>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 reveal reveal-d2">
         <div class="row g-3">
           <div class="col-md-6">
             <div class="tech-card">
               <div class="tc-icon"><i class="bi bi-translate"></i></div>
-              <h6>Global Semantic Localization</h6>
+              <h3>Global Semantic Localization</h3>
               <p>Not just translation — our AI maps local search intent in every market, so your listing ranks for how buyers actually think, not just what a dictionary says.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="tech-card">
               <div class="tc-icon"><i class="bi bi-arrow-repeat"></i></div>
-              <h6>Algorithmic Trend-Sync</h6>
+              <h3>Algorithmic Trend-Sync</h3>
               <p>Our AI detects shifts in search volume and keyword velocity and updates your listings automatically before rank drops happen. You never lose rank during seasonal shifts.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="tech-card">
               <div class="tc-icon"><i class="bi bi-speedometer2"></i></div>
-              <h6>Rapid Launch Pipeline</h6>
+              <h3>Rapid Launch Pipeline</h3>
               <p>What takes other agencies weeks, we complete in days — through a fully automated launch pipeline with zero manual bottlenecks.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="tech-card">
               <div class="tc-icon"><i class="bi bi-globe-americas"></i></div>
-              <h6>Parallel Multi-Market Deployment</h6>
+              <h3>Parallel Multi-Market Deployment</h3>
               <p>Launch across US, UK, DE, FR, IT, ES and more simultaneously — from one centralized AI platform, not one market at a time.</p>
             </div>
           </div>
@@ -1067,56 +1190,56 @@
 <!-- ══ SERVICES ══ -->
 <section class="services-section" id="services">
   <div class="container">
-    <div class="text-center mb-5">
+    <div class="text-center mb-5 reveal">
       <div class="section-label">What We Do</div>
       <h2 class="section-title">We Run Your Amazon. You Run Your Business.</h2>
       <div class="divider-orange mx-auto"></div>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 reveal reveal-d1">
         <div class="service-card">
-          <div class="service-num">01</div>
-          <h5><i class="bi bi-rocket-takeoff text-warning me-2"></i>Full Turnkey Launch</h5>
+          <div class="service-num" aria-hidden="true">01</div>
+          <h3><i class="bi bi-rocket-takeoff text-warning me-2"></i>Full Turnkey Launch</h3>
           <p>You come with a product. You leave with a working business. Registration, strategy, and launch — done for you, from day one.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="service-card">
-          <div class="service-num">02</div>
-          <h5><i class="bi bi-pencil-square text-warning me-2"></i>AI-Driven Conversion Engine</h5>
+          <div class="service-num" aria-hidden="true">02</div>
+          <h3><i class="bi bi-pencil-square text-warning me-2"></i>AI-Driven Conversion Engine</h3>
           <p>We don't write copy — we engineer it. Every listing is scientifically structured to trigger Amazon's purchase flywheel: discoverability, conversion, and velocity, working in sequence.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="service-card">
-          <div class="service-num">03</div>
-          <h5><i class="bi bi-megaphone text-warning me-2"></i>Predictive Ad Scaling</h5>
+          <div class="service-num" aria-hidden="true">03</div>
+          <h3><i class="bi bi-megaphone text-warning me-2"></i>Predictive Ad Scaling</h3>
           <p>Our machine learning models and keyword research funnels surface low-ACoS keywords your competitors have missed — then build bid strategies around them before the market catches up.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="service-card">
-          <div class="service-num">04</div>
-          <h5><i class="bi bi-globe2 text-warning me-2"></i>International Scaling</h5>
+          <div class="service-num" aria-hidden="true">04</div>
+          <h3><i class="bi bi-globe2 text-warning me-2"></i>International Scaling</h3>
           <p>New markets. New languages. Fast. Expansion into Europe and the US with multilingual listings — powered by our system.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="service-card">
-          <div class="service-num">05</div>
-          <h5><i class="bi bi-briefcase text-warning me-2"></i>Full Account Management</h5>
+          <div class="service-num" aria-hidden="true">05</div>
+          <h3><i class="bi bi-briefcase text-warning me-2"></i>Full Account Management</h3>
           <p>We run the entire Amazon operation — listings, ads, inventory, compliance. You collect the results.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="service-card" style="background:var(--primary-blue);border-color:rgba(255,214,0,0.3)">
-          <div class="service-num" style="color:rgba(255,214,0,0.3)">+</div>
-          <h5 style="color:#fff"><i class="bi bi-cpu text-warning me-2"></i>AI-Powered Growth Tools</h5>
+        <div class="service-card" style="background:var(--primary-blue);border-color:rgba(0,196,154,0.3)">
+          <div class="service-num" aria-hidden="true" style="color:rgba(0,196,154,0.85)">+</div>
+          <h3 style="color:#fff"><i class="bi bi-cpu text-warning me-2"></i>AI-Powered Growth Tools</h3>
           <p style="color:var(--text-muted-light)">The AI technology we use to scale our clients. Competitive intelligence, automated content, and more.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
         </div>
@@ -1126,45 +1249,42 @@
 </section>
 
 <!-- ══ APPROACH ══ -->
-<!--
 <section class="approach-section" id="approach">
   <div class="container">
-    <div class="text-center mb-5">
+    <div class="text-center mb-5 reveal">
       <div class="section-label" style="color:var(--primary-gold)">How We Work</div>
-      <h2 class="section-title light">Beyond Services. A Proprietary Growth Engine.</h2>
+      <h2 class="section-title light">A Proprietary Growth Engine.</h2>
       <div class="divider-orange mx-auto"></div>
       <p style="color:var(--text-muted-light);max-width:560px;margin:0 auto;font-size:1rem">Every engagement follows a proven three-phase system built to drive lasting growth — not just deliver a one-time boost.</p>
     </div>
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 position-relative">
+      <div class="col-lg-4 col-md-6 position-relative reveal reveal-d1">
         <div class="step-card">
           <div class="step-num">1</div>
-          <h5>Launch</h5>
+          <h3>Launch</h3>
           <p>We build the foundation: account setup, competitive strategy, and a go-to-market plan built to win from day one.</p>
         </div>
         <div class="step-connector d-none d-lg-block"><i class="bi bi-arrow-right"></i></div>
       </div>
-      <div class="col-lg-4 col-md-6 position-relative">
+      <div class="col-lg-4 col-md-6 position-relative reveal reveal-d2">
         <div class="step-card">
           <div class="step-num">2</div>
-          <h5>Optimize</h5>
+          <h3>Optimize</h3>
           <p>We eliminate waste and increase conversion across listings, advertising, and operations — systematically.</p>
         </div>
         <div class="step-connector d-none d-lg-block"><i class="bi bi-arrow-right"></i></div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 reveal reveal-d3">
         <div class="step-card">
           <div class="step-num">3</div>
-          <h5>Scale</h5>
+          <h3>Scale</h3>
           <p>We accelerate growth through technology, automation, and market expansion — turning your Amazon channel into a real business asset.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
--->
 <!-- ══ WHY US ══ -->
-<!--
 <section class="whyus-section" id="whyus">
   <div class="container">
     <div class="row g-5 align-items-center">
@@ -1214,40 +1334,39 @@
     </div>
   </div>
 </section>
--->
 <!-- ══ SOCIAL PROOF ══ -->
 <section class="proof-section" id="results">
   <div class="container">
-    <div class="text-center mb-5">
+    <div class="text-center mb-5 reveal">
       <div class="section-label" style="color:var(--primary-gold)">Client Results</div>
       <h2 class="section-title light">From Day One, Our Clients Are Set Up to Profit.</h2>
       <div class="divider-orange mx-auto"></div>
     </div>
     <div class="row g-4 mb-5">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 reveal reveal-d1">
         <div class="proof-card">
           <div class="proof-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
-          <h5>Zero to First Sales in Under 30 Days</h5>
+          <h3>Zero to First Sales in Under 30 Days</h3>
           <p>We've taken brands from zero presence to profitable listings — faster than any other agency on the market.</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="proof-card">
           <div class="proof-icon"><i class="bi bi-bar-chart-fill"></i></div>
-          <h5>3.8× Average Revenue Growth</h5>
+          <h3>3.8× Average Revenue Growth</h3>
           <p>Our clients see nearly quadruple their revenue within the first 12 months — through our combined optimization and scaling system.</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="proof-card">
           <div class="proof-icon"><i class="bi bi-globe-americas"></i></div>
-          <h5>Successful Global Expansion</h5>
+          <h3>Successful Global Expansion</h3>
           <p>We've launched brands across the US, UK, Germany, France, Italy, and Spain — using our multilingual content platform.</p>
         </div>
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4">
+      <div class="col-lg-4 reveal reveal-d1">
         <div class="testimonial-card">
           <div class="quote-mark">"</div>
           <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
@@ -1256,7 +1375,7 @@
           <div class="role">Founder, Consumer Electronics Brand</div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 reveal reveal-d2">
         <div class="testimonial-card">
           <div class="quote-mark">"</div>
           <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
@@ -1265,7 +1384,7 @@
           <div class="role">Owner, A Portfolio of Hair Care Brands</div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 reveal reveal-d3">
         <div class="testimonial-card">
           <div class="quote-mark">"</div>
           <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
@@ -1280,6 +1399,19 @@
     </div>
   </div>
 </section>
+
+<!-- ══ MID CTA BAND ══ -->
+<div class="cta-band">
+  <div class="container">
+    <div class="band-inner">
+      <div>
+        <h3>Ready to Turn Your Amazon Account Into a Sales Machine?</h3>
+        <p class="band-sub">Every day with a weak listing or a bleeding ad campaign is revenue you'll never get back.</p>
+      </div>
+      <a href="#contact" class="btn-band-cta">Get Your Free AI Audit</a>
+    </div>
+  </div>
+</div>
 
 <!-- ══ FAQ ══ -->
 <section class="faq-section" id="faq">
@@ -1351,7 +1483,7 @@
             <i class="bi bi-plus-lg faq-icon"></i>
           </button>
           <div class="faq-answer">
-            Pricing depends on your current Amazon status, the services needed, and the number of target markets. We provide a free consultation and a custom growth roadmap before any commitment — no obligation, no pressure. Contact us at <a href="mailto:info@gptsrl.com" style="color:var(--primary-gold);">info@gptsrl.com</a> to get started.
+            Pricing depends on your current Amazon status, the services needed, and the number of target markets. We provide a free consultation and a custom growth roadmap before any commitment — no obligation, no pressure. Contact us at <a href="mailto:info@gptsrl.com" style="color:var(--accent-on-light);">info@gptsrl.com</a> to get started.
           </div>
         </div>
 
@@ -1368,38 +1500,38 @@
     <div class="row g-5 align-items-start">
       <div class="col-lg-5">
         <div class="section-label" style="color:var(--primary-gold)">Get Started</div>
-        <h2 class="section-title light">Ready to Turn Amazon Into a Real Sales Machine?</h2>
+        <h2 class="section-title light">Stop the Bleeding.<br>Start the Scaling.</h2>
         <div class="divider-orange"></div>
         <p style="color:var(--text-muted-light);font-size:1.05rem;line-height:1.8;">
           Every day with a weak listing or a bleeding ad campaign is revenue you'll never get back. Let's build the system that fixes it — starting today.
         </p>
         <div class="d-flex flex-column gap-3 mt-4">
           <div class="d-flex align-items-center gap-3">
-            <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <div class="check-circle">
               <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">Free custom growth roadmap — no charge, no obligation</span>
           </div>
           <div class="d-flex align-items-center gap-3">
-            <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <div class="check-circle">
               <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">We respond within 24 hours on business days</span>
           </div>
           <div class="d-flex align-items-center gap-3">
-            <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <div class="check-circle">
               <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">No pushy sales tactics — just a real conversation</span>
           </div>
           <div class="d-flex align-items-center gap-3">
-            <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <div class="check-circle">
               <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">No long-term contracts. No setup fees. Just a data-backed roadmap to $1M+ scale.</span>
           </div>
         </div>
-        <div style="margin-top:2rem;padding:1.2rem 1.5rem;background:rgba(255,153,0,0.08);border:1px solid rgba(255,153,0,0.25);border-radius:10px;">
+        <div class="urgency-box">
           <p style="color:var(--primary-gold);font-weight:700;font-size:0.88rem;margin:0 0 0.2rem;text-transform:uppercase;letter-spacing:1px;">⚡ Limited Availability</p>
           <p style="color:#ccc;font-size:0.9rem;margin:0;">We onboard a limited number of new clients each quarter to guarantee quality. Spots for Q2 2026 are filling fast.</p>
         </div>
@@ -1474,6 +1606,8 @@
 </section>
 
 
+</main>
+
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="container">
@@ -1482,13 +1616,13 @@
         <div class="footer-brand">GPT<span>Growth</span>Lab</div>
         <p style="font-size:0.9rem;max-width:300px;">Full-service Amazon agency powered by proprietary software. We launch, optimize, and scale your Amazon business across global markets.</p>
         <div class="d-flex gap-3 mt-3">
-          <a href="#" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-linkedin"></i></a>
-          <a href="#" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter / X" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube" style="font-size:1.3rem;color:#888;display:inline;"><i class="bi bi-youtube" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="col-lg-2 col-6">
-        <h6>Services</h6>
+        <h3>Services</h3>
         <a href="#services">Amazon Launch</a>
         <a href="#services">Listing Optimization</a>
         <a href="#services">Amazon Ads</a>
@@ -1496,7 +1630,7 @@
         <a href="#services">Account Management</a>
       </div>
       <div class="col-lg-2 col-6">
-        <h6>Company</h6>
+        <h3>Company</h3>
         <a href="#">About Us</a>
         <a href="#technology">Our Technology</a>
         <a href="#results">Case Studies</a>
@@ -1504,7 +1638,7 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="col-lg-4">
-        <h6>Contact Us</h6>
+        <h3>Contact Us</h3>
         <div style="font-size:0.9rem;color:#aaa;line-height:1.9;">
           <p style="margin-bottom:0.8rem;">
             <i class="bi bi-building me-2" style="color:var(--primary-gold);"></i>
@@ -1565,7 +1699,7 @@
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id'); });
     navLinks.forEach(l => {
       l.style.color = '';
-      if (l.getAttribute('href') === '#' + current) l.style.color = '#FF9900';
+      if (l.getAttribute('href') === '#' + current) l.style.color = '#00704A';
     });
     // Show floating CTA after scrolling past hero (~500px)
     if (window.scrollY > 500) {
@@ -1599,6 +1733,17 @@
       }
     });
   });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 <!-- Place this script at the end of the body tag -->
 <script>
