@@ -163,15 +163,14 @@
 
   <style>
     :root {
-      --amazon-orange: #FF9900;
-      --amazon-orange-dark: #e68900;
-      --amazon-navy: #131921;
-      --amazon-navy-mid: #1a2a3a;
-      --amazon-blue: #146eb4;
-      --amazon-blue-light: #1a8fcb;
+      --primary-gold: #FFD600;
+      --primary-gold-dark: #ccb000;
+      --primary-blue: #2B6CB0;
+      --primary-blue-dark: #215387;
+      --primary-blue-deeper: #1a3a6b;
       --text-light: #f5f5f5;
       --text-muted-light: #c0c8d0;
-      --section-alt: #0f1923;
+      --section-alt: #215387;
     }
 
     * { box-sizing: border-box; }
@@ -185,44 +184,45 @@
 
     /* ── NAVBAR ── */
     .navbar {
-      background: var(--amazon-navy);
+      background: #ffffff;
       padding: 0.7rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 3px solid var(--amazon-orange);
+      border-bottom: 3px solid var(--primary-blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: 900;
       letter-spacing: -0.5px;
-      color: #fff !important;
+      color: #1A202C !important;
     }
-    .navbar-brand span { color: var(--amazon-orange); }
+    .navbar-brand span { color: var(--primary-blue); }
     .nav-link {
-      color: var(--text-muted-light) !important;
+      color: #5A5A5A !important;
       font-weight: 500;
       font-size: 0.92rem;
       padding: 0.4rem 0.9rem !important;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--amazon-orange) !important; }
-    .navbar-toggler { border-color: var(--amazon-orange); }
-    .navbar-toggler-icon { filter: invert(1); }
+    .nav-link:hover { color: var(--primary-blue) !important; }
+    .navbar-toggler { border-color: var(--primary-blue); }
+    .navbar-toggler-icon { filter: none; }
     .btn-nav-cta {
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       color: #111 !important;
       font-weight: 700;
-      border-radius: 6px;
+      border-radius: 0;
       padding: 0.45rem 1.2rem !important;
       margin-left: 0.5rem;
       transition: background 0.2s;
     }
-    .btn-nav-cta:hover { background: var(--amazon-orange-dark); }
+    .btn-nav-cta:hover { background: var(--primary-gold-dark); }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--amazon-navy) 0%, var(--amazon-navy-mid) 60%, #1b3454 100%);
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 60%, #1a3a6b 100%);
       padding: 100px 0 90px;
       position: relative;
       overflow: hidden;
@@ -231,7 +231,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF9900' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD600' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
       pointer-events: none;
     }
     .hero-eyebrow {
@@ -239,7 +239,7 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       margin-bottom: 1.2rem;
     }
     .hero h1 {
@@ -249,11 +249,11 @@
       color: #fff;
       margin-bottom: 1rem;
     }
-    .hero h1 .highlight { color: var(--amazon-orange); }
+    .hero h1 .highlight { color: var(--primary-gold); }
     .hero-sub {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       margin-bottom: 1rem;
     }
     .hero-usp {
@@ -263,18 +263,18 @@
       margin-bottom: 2.2rem;
     }
     .btn-primary-cta {
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       border: none;
       color: #111;
       font-weight: 800;
       font-size: 1rem;
       padding: 0.8rem 2rem;
-      border-radius: 8px;
+      border-radius: 0;
       text-decoration: none;
       display: inline-block;
       transition: background 0.2s, transform 0.1s;
     }
-    .btn-primary-cta:hover { background: var(--amazon-orange-dark); transform: translateY(-1px); color: #111; }
+    .btn-primary-cta:hover { background: var(--primary-gold-dark); transform: translateY(-1px); color: #111; }
     .btn-outline-cta {
       background: transparent;
       border: 2px solid #fff;
@@ -282,22 +282,22 @@
       font-weight: 700;
       font-size: 1rem;
       padding: 0.75rem 1.8rem;
-      border-radius: 8px;
+      border-radius: 0;
       text-decoration: none;
       display: inline-block;
       transition: all 0.2s;
     }
-    .btn-outline-cta:hover { background: #fff; color: var(--amazon-navy); }
+    .btn-outline-cta:hover { background: #fff; color: var(--primary-blue); }
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(255,153,0,0.12);
-      border: 1px solid rgba(255,153,0,0.3);
+      background: rgba(255,214,0,0.12);
+      border: 1px solid rgba(255,214,0,0.3);
       border-radius: 40px;
       padding: 0.4rem 1rem;
       font-size: 0.82rem;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       font-weight: 600;
       margin-bottom: 2rem;
     }
@@ -310,7 +310,7 @@
     .hero-stat .num {
       font-size: 2rem;
       font-weight: 900;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       line-height: 1;
     }
     .hero-stat .lbl {
@@ -325,18 +325,18 @@
     }
     .hero-card {
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,153,0,0.2);
+      border: 1px solid rgba(255,214,0,0.2);
       border-radius: 12px;
       padding: 1.2rem 1.5rem;
       color: #fff;
     }
-    .hero-card .icon { font-size: 1.8rem; color: var(--amazon-orange); margin-bottom: 0.5rem; }
+    .hero-card .icon { font-size: 1.8rem; color: var(--primary-gold); margin-bottom: 0.5rem; }
     .hero-card h6 { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
     .hero-card p { font-size: 0.82rem; color: var(--text-muted-light); margin: 0; }
 
     /* ── TRUST BAR ── */
     .trust-bar {
-      background: var(--amazon-orange);
+      background: var(--primary-blue);
       padding: 0.85rem 0;
     }
     .trust-bar-inner {
@@ -352,7 +352,7 @@
       gap: 0.5rem;
       font-size: 0.88rem;
       font-weight: 700;
-      color: #111;
+      color: #fff;
     }
     .trust-item i { font-size: 1rem; }
 
@@ -362,20 +362,20 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--amazon-orange);
+      color: var(--primary-blue);
       margin-bottom: 0.6rem;
     }
     .section-title {
       font-size: clamp(1.6rem, 3.5vw, 2.4rem);
       font-weight: 900;
       line-height: 1.22;
-      color: var(--amazon-navy);
+      color: #1A202C;
     }
     .section-title.light { color: #fff; }
     .divider-orange {
       width: 56px;
       height: 4px;
-      background: var(--amazon-orange);
+      background: var(--primary-blue);
       border-radius: 2px;
       margin: 1rem 0 1.5rem;
     }
@@ -386,10 +386,10 @@
       padding: 90px 0;
     }
     .problem-text { font-size: 1.08rem; color: #444; }
-    .problem-text strong { color: var(--amazon-navy); }
+    .problem-text strong { color: #1A202C; }
     .problem-callout {
-      background: var(--amazon-navy);
-      border-left: 5px solid var(--amazon-orange);
+      background: var(--primary-blue);
+      border-left: 5px solid var(--primary-gold);
       border-radius: 0 10px 10px 0;
       padding: 1.5rem 2rem;
       color: #fff;
@@ -412,34 +412,34 @@
 
     /* ── TECH ADVANTAGE ── */
     .tech-section {
-      background: var(--amazon-navy);
+      background: var(--primary-blue);
       padding: 90px 0;
     }
     .tech-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,153,0,0.18);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
       padding: 1.6rem;
       height: 100%;
       transition: border-color 0.2s, transform 0.2s;
     }
     .tech-card:hover {
-      border-color: var(--amazon-orange);
+      border-color: var(--primary-gold);
       transform: translateY(-3px);
     }
     .tech-card .tc-icon {
       width: 52px; height: 52px;
-      background: rgba(255,153,0,0.15);
+      background: rgba(255,214,0,0.2);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       margin-bottom: 1rem;
     }
     .tech-card h6 { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
     .tech-card p { color: var(--text-muted-light); font-size: 0.9rem; margin: 0; }
     .tech-main-copy { color: var(--text-muted-light); font-size: 1rem; line-height: 1.8; }
-    .tech-main-copy strong { color: var(--amazon-orange); }
+    .tech-main-copy strong { color: var(--primary-gold); }
 
     /* ── SERVICES ── */
     .services-section { padding: 90px 0; background: #fff; }
@@ -457,32 +457,32 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 4px;
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       transform: scaleX(0);
       transition: transform 0.3s;
       transform-origin: left;
     }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: rgba(255,153,0,0.3); transform: translateY(-4px); }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: rgba(43,108,176,0.3); transform: translateY(-4px); }
     .service-num {
       font-size: 2.5rem;
       font-weight: 900;
-      color: rgba(255,153,0,0.15);
+      color: rgba(43,108,176,0.15);
       line-height: 1;
       margin-bottom: 0.5rem;
     }
-    .service-card h5 { font-weight: 800; font-size: 1.1rem; color: var(--amazon-navy); margin-bottom: 0.5rem; }
+    .service-card h5 { font-weight: 800; font-size: 1.1rem; color: #1A202C; margin-bottom: 0.5rem; }
     .service-card p { font-size: 0.93rem; color: #555; margin-bottom: 1rem; }
     .service-link {
       font-size: 0.88rem;
       font-weight: 700;
-      color: var(--amazon-orange);
+      color: var(--primary-blue);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
     }
-    .service-link:hover { color: var(--amazon-orange-dark); text-decoration: underline; }
+    .service-link:hover { color: var(--primary-blue-dark); text-decoration: underline; }
 
     /* ── APPROACH ── */
     .approach-section {
@@ -497,7 +497,7 @@
     .step-num {
       width: 70px; height: 70px;
       border-radius: 50%;
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       color: #111;
       font-size: 1.8rem;
       font-weight: 900;
@@ -512,12 +512,12 @@
       transform: translateY(-50%);
       right: -30px;
       font-size: 2.5rem;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       opacity: 0.7;
     }
 
     /* ── WHY US ── */
-    .whyus-section { padding: 90px 0; background: #f8f9fa; }
+    .whyus-section { padding: 90px 0; background: #EDF2F7; }
     .whyus-item {
       display: flex;
       gap: 1.2rem;
@@ -532,18 +532,18 @@
     .whyus-item:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
     .whyus-icon {
       width: 46px; height: 46px;
-      background: rgba(255,153,0,0.12);
+      background: rgba(43,108,176,0.1);
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
-      color: var(--amazon-orange);
+      color: var(--primary-blue);
       flex-shrink: 0;
     }
-    .whyus-item h6 { font-weight: 700; font-size: 1rem; color: var(--amazon-navy); margin-bottom: 0.2rem; }
+    .whyus-item h6 { font-weight: 700; font-size: 1rem; color: #1A202C; margin-bottom: 0.2rem; }
     .whyus-item p { font-size: 0.9rem; color: #666; margin: 0; }
     .whyus-closing {
-      background: var(--amazon-navy);
-      border-left: 5px solid var(--amazon-orange);
+      background: var(--primary-blue);
+      border-left: 5px solid var(--primary-gold);
       padding: 1.5rem 2rem;
       border-radius: 0 12px 12px 0;
       color: #fff;
@@ -551,36 +551,36 @@
       font-weight: 700;
       margin-top: 1.5rem;
     }
-    .whyus-closing span { color: var(--amazon-orange); }
+    .whyus-closing span { color: var(--primary-gold); }
 
     /* ── SOCIAL PROOF ── */
     .proof-section {
-      background: var(--amazon-navy);
+      background: var(--primary-blue);
       padding: 90px 0;
     }
     .proof-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,153,0,0.15);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 14px;
       padding: 2rem;
       text-align: center;
       height: 100%;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .proof-card:hover { border-color: var(--amazon-orange); transform: translateY(-4px); }
-    .proof-icon { font-size: 2.5rem; color: var(--amazon-orange); margin-bottom: 1rem; }
+    .proof-card:hover { border-color: var(--primary-gold); transform: translateY(-4px); }
+    .proof-icon { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 1rem; }
     .proof-card h5 { color: #fff; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.5rem; }
     .proof-card p { color: var(--text-muted-light); font-size: 0.9rem; margin: 0; }
     .testimonial-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 14px;
       padding: 2rem;
       position: relative;
     }
     .testimonial-card .quote-mark {
       font-size: 4rem;
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
       line-height: 1;
       font-family: Georgia, serif;
       opacity: 0.4;
@@ -595,13 +595,13 @@
       margin: 1.5rem 0 1rem;
       line-height: 1.75;
     }
-    .testimonial-card .author { font-size: 0.88rem; font-weight: 700; color: var(--amazon-orange); }
-    .testimonial-card .role { font-size: 0.82rem; color: #888; }
-    .stars { color: var(--amazon-orange); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .testimonial-card .author { font-size: 0.88rem; font-weight: 700; color: var(--primary-gold); }
+    .testimonial-card .role { font-size: 0.82rem; color: #aaa; }
+    .stars { color: var(--primary-gold); font-size: 0.9rem; margin-bottom: 0.5rem; }
 
     /* ── FINAL CTA ── */
     .cta-section {
-      background: linear-gradient(135deg, #FF9900 0%, #e87b00 100%);
+      background: linear-gradient(135deg, #FFD600 0%, #ccb000 100%);
       padding: 100px 0;
       text-align: center;
     }
@@ -612,14 +612,14 @@
       line-height: 1.2;
       margin-bottom: 1.2rem;
     }
-    .cta-section p { font-size: 1.1rem; color: #2a1800; max-width: 560px; margin: 0 auto 2.5rem; }
+    .cta-section p { font-size: 1.1rem; color: #2a2000; max-width: 560px; margin: 0 auto 2.5rem; }
     .btn-dark-cta {
-      background: var(--amazon-navy);
+      background: var(--primary-blue-dark);
       color: #fff;
       font-weight: 800;
       font-size: 1.05rem;
       padding: 0.9rem 2.2rem;
-      border-radius: 8px;
+      border-radius: 0;
       text-decoration: none;
       display: inline-block;
       border: none;
@@ -632,27 +632,27 @@
       font-weight: 700;
       font-size: 1.05rem;
       padding: 0.85rem 2rem;
-      border-radius: 8px;
+      border-radius: 0;
       text-decoration: none;
       display: inline-block;
       border: 2px solid #111;
       transition: all 0.2s;
     }
-    .btn-white-outline-cta:hover { background: #111; color: var(--amazon-orange); }
+    .btn-white-outline-cta:hover { background: #111; color: var(--primary-gold); }
 
     /* ── FOOTER ── */
     footer {
-      background: #0d1117;
-      border-top: 4px solid var(--amazon-orange);
+      background: var(--primary-blue-deeper);
+      border-top: 4px solid var(--primary-gold);
       padding: 60px 0 24px;
-      color: #888;
+      color: #aaa;
     }
     .footer-brand { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 0.6rem; }
-    .footer-brand span { color: var(--amazon-orange); }
+    .footer-brand span { color: var(--primary-gold); }
     footer h6 { color: #fff; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
-    footer a { color: #888; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; transition: color 0.2s; }
-    footer a:hover { color: var(--amazon-orange); }
-    .footer-bottom { border-top: 1px solid #222; margin-top: 2.5rem; padding-top: 1.5rem; font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    footer a { color: #aaa; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; transition: color 0.2s; }
+    footer a:hover { color: var(--primary-gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2.5rem; padding-top: 1.5rem; font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
 
     /* ── COMPARISON TABLE ── */
     .compare-table {
@@ -664,7 +664,7 @@
       font-size: 0.92rem;
     }
     .compare-table thead tr {
-      background: var(--amazon-navy);
+      background: var(--primary-blue);
     }
     .compare-table thead th {
       padding: 0.85rem 1.1rem;
@@ -676,7 +676,7 @@
       border: none;
     }
     .compare-table thead th.col-gpt {
-      color: var(--amazon-orange);
+      color: var(--primary-gold);
     }
     .compare-table tbody tr {
       border-bottom: 1px solid #e8ecef;
@@ -690,7 +690,7 @@
     }
     .compare-table tbody td:first-child {
       font-weight: 700;
-      color: var(--amazon-navy);
+      color: #1A202C;
       background: #f8f9fa;
       width: 30%;
     }
@@ -699,7 +699,7 @@
       font-weight: 600;
     }
     .compare-table .icon-bad { color: #dc3545; margin-right: 0.3rem; }
-    .compare-table .icon-good { color: var(--amazon-orange); margin-right: 0.3rem; }
+    .compare-table .icon-good { color: var(--primary-blue); margin-right: 0.3rem; }
 
     /* ── FAQ ── */
     .faq-section { padding: 90px 0; background: #fff; }
@@ -719,7 +719,7 @@
       padding: 1.2rem 1.5rem;
       font-weight: 700;
       font-size: 1rem;
-      color: var(--amazon-navy);
+      color: #1A202C;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -728,7 +728,7 @@
       transition: background 0.2s;
     }
     .faq-question:hover { background: #fafafa; }
-    .faq-question.active { color: var(--amazon-orange); background: #fffaf0; }
+    .faq-question.active { color: var(--primary-blue); background: #EBF4FF; }
     .faq-question .faq-icon { font-size: 1.1rem; flex-shrink: 0; transition: transform 0.25s; }
     .faq-question.active .faq-icon { transform: rotate(45deg); }
     .faq-answer {
@@ -743,44 +743,44 @@
     .faq-answer.open { max-height: 400px; padding: 0 1.5rem 1.2rem; }
 
     /* ── FORM ── */
-    .form-section { padding: 90px 0; background: var(--amazon-navy); }
+    .form-section { padding: 90px 0; background: var(--primary-blue); }
     .contact-form {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,153,0,0.2);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 16px;
       padding: 2.5rem;
     }
     .form-label { color: #ccc; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; }
     .form-control, .form-select {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
       color: #fff;
-      border-radius: 8px;
+      border-radius: 0;
       padding: 0.7rem 1rem;
       font-size: 0.95rem;
     }
-    .form-control::placeholder { color: #888; }
+    .form-control::placeholder { color: #aaa; }
     .form-control:focus, .form-select:focus {
-      background: rgba(255,255,255,0.1);
-      border-color: var(--amazon-orange);
+      background: rgba(255,255,255,0.15);
+      border-color: var(--primary-gold);
       color: #fff;
-      box-shadow: 0 0 0 3px rgba(255,153,0,0.15);
+      box-shadow: 0 0 0 3px rgba(255,214,0,0.2);
     }
     .form-select option { background: #1a1a1a; color: #fff; }
     .btn-submit {
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       color: #111;
       font-weight: 800;
       font-size: 1.05rem;
       padding: 0.85rem 2.5rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 0;
       width: 100%;
       transition: background 0.2s, transform 0.1s;
       cursor: pointer;
     }
-    .btn-submit:hover { background: var(--amazon-orange-dark); transform: translateY(-1px); }
-    .form-disclaimer { font-size: 0.8rem; color: #777; text-align: center; margin-top: 0.8rem; }
+    .btn-submit:hover { background: var(--primary-gold-dark); transform: translateY(-1px); }
+    .form-disclaimer { font-size: 0.8rem; color: #aaa; text-align: center; margin-top: 0.8rem; }
     #my-form-status {
       visibility: hidden;
       margin-top: 1rem;
@@ -820,25 +820,25 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       color: #111;
       font-weight: 800;
       font-size: 0.95rem;
       padding: 0.8rem 1.6rem;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 6px 24px rgba(255,153,0,0.5);
+      box-shadow: 0 6px 24px rgba(255,214,0,0.4);
       transition: background 0.2s, transform 0.2s;
     }
-    .floating-cta a:hover { background: var(--amazon-orange-dark); transform: scale(1.04); color: #111; }
+    .floating-cta a:hover { background: var(--primary-gold-dark); transform: scale(1.04); color: #111; }
 
     /* ── MISC ── */
     .badge-orange {
-      background: var(--amazon-orange);
+      background: var(--primary-gold);
       color: #111;
       font-weight: 700;
       padding: 0.3rem 0.8rem;
-      border-radius: 4px;
+      border-radius: 0;
       font-size: 0.78rem;
     }
 
@@ -966,7 +966,7 @@
         <p class="problem-text">The old playbook is dead. The brands winning on Amazon today aren't working harder — they're operating with better systems.</p>
         <div class="problem-callout">
           We replace guesswork with data science.<br>
-          <span style="color:var(--amazon-orange)">Every listing. Every keyword. Every bid.</span>
+          <span style="color:var(--primary-gold)">Every listing. Every keyword. Every bid.</span>
         </div>
       </div>
       <div class="col-lg-6">
@@ -1017,7 +1017,7 @@
   <div class="container">
     <div class="row g-5 align-items-center">
       <div class="col-lg-5">
-        <div class="section-label" style="color:var(--amazon-orange)">The Unfair Advantage</div>
+        <div class="section-label" style="color:var(--primary-gold)">The Unfair Advantage</div>
         <h2 class="section-title light">AI Platform Built to Outperform Human Teams</h2>
         <div class="divider-orange"></div>
         <p class="tech-main-copy">
@@ -1114,8 +1114,8 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="service-card" style="background:var(--amazon-navy);border-color:rgba(255,153,0,0.3)">
-          <div class="service-num" style="color:rgba(255,153,0,0.3)">+</div>
+        <div class="service-card" style="background:var(--primary-blue);border-color:rgba(255,214,0,0.3)">
+          <div class="service-num" style="color:rgba(255,214,0,0.3)">+</div>
           <h5 style="color:#fff"><i class="bi bi-cpu text-warning me-2"></i>AI-Powered Growth Tools</h5>
           <p style="color:var(--text-muted-light)">The AI technology we use to scale our clients. Competitive intelligence, automated content, and more.</p>
           <a href="#contact" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
@@ -1130,7 +1130,7 @@
 <section class="approach-section" id="approach">
   <div class="container">
     <div class="text-center mb-5">
-      <div class="section-label" style="color:var(--amazon-orange)">How We Work</div>
+      <div class="section-label" style="color:var(--primary-gold)">How We Work</div>
       <h2 class="section-title light">Beyond Services. A Proprietary Growth Engine.</h2>
       <div class="divider-orange mx-auto"></div>
       <p style="color:var(--text-muted-light);max-width:560px;margin:0 auto;font-size:1rem">Every engagement follows a proven three-phase system built to drive lasting growth — not just deliver a one-time boost.</p>
@@ -1219,7 +1219,7 @@
 <section class="proof-section" id="results">
   <div class="container">
     <div class="text-center mb-5">
-      <div class="section-label" style="color:var(--amazon-orange)">Client Results</div>
+      <div class="section-label" style="color:var(--primary-gold)">Client Results</div>
       <h2 class="section-title light">From Day One, Our Clients Are Set Up to Profit.</h2>
       <div class="divider-orange mx-auto"></div>
     </div>
@@ -1351,7 +1351,7 @@
             <i class="bi bi-plus-lg faq-icon"></i>
           </button>
           <div class="faq-answer">
-            Pricing depends on your current Amazon status, the services needed, and the number of target markets. We provide a free consultation and a custom growth roadmap before any commitment — no obligation, no pressure. Contact us at <a href="mailto:info@gptsrl.com" style="color:var(--amazon-orange);">info@gptsrl.com</a> to get started.
+            Pricing depends on your current Amazon status, the services needed, and the number of target markets. We provide a free consultation and a custom growth roadmap before any commitment — no obligation, no pressure. Contact us at <a href="mailto:info@gptsrl.com" style="color:var(--primary-gold);">info@gptsrl.com</a> to get started.
           </div>
         </div>
 
@@ -1367,7 +1367,7 @@
   <div class="container">
     <div class="row g-5 align-items-start">
       <div class="col-lg-5">
-        <div class="section-label" style="color:var(--amazon-orange)">Get Started</div>
+        <div class="section-label" style="color:var(--primary-gold)">Get Started</div>
         <h2 class="section-title light">Ready to Turn Amazon Into a Real Sales Machine?</h2>
         <div class="divider-orange"></div>
         <p style="color:var(--text-muted-light);font-size:1.05rem;line-height:1.8;">
@@ -1376,31 +1376,31 @@
         <div class="d-flex flex-column gap-3 mt-4">
           <div class="d-flex align-items-center gap-3">
             <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <i class="bi bi-check-lg" style="color:var(--amazon-orange);font-size:1.1rem;"></i>
+              <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">Free custom growth roadmap — no charge, no obligation</span>
           </div>
           <div class="d-flex align-items-center gap-3">
             <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <i class="bi bi-check-lg" style="color:var(--amazon-orange);font-size:1.1rem;"></i>
+              <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">We respond within 24 hours on business days</span>
           </div>
           <div class="d-flex align-items-center gap-3">
             <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <i class="bi bi-check-lg" style="color:var(--amazon-orange);font-size:1.1rem;"></i>
+              <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">No pushy sales tactics — just a real conversation</span>
           </div>
           <div class="d-flex align-items-center gap-3">
             <div style="width:40px;height:40px;background:rgba(255,153,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <i class="bi bi-check-lg" style="color:var(--amazon-orange);font-size:1.1rem;"></i>
+              <i class="bi bi-check-lg" style="color:var(--primary-gold);font-size:1.1rem;"></i>
             </div>
             <span style="color:#ccc;font-size:0.95rem;">No long-term contracts. No setup fees. Just a data-backed roadmap to $1M+ scale.</span>
           </div>
         </div>
         <div style="margin-top:2rem;padding:1.2rem 1.5rem;background:rgba(255,153,0,0.08);border:1px solid rgba(255,153,0,0.25);border-radius:10px;">
-          <p style="color:var(--amazon-orange);font-weight:700;font-size:0.88rem;margin:0 0 0.2rem;text-transform:uppercase;letter-spacing:1px;">⚡ Limited Availability</p>
+          <p style="color:var(--primary-gold);font-weight:700;font-size:0.88rem;margin:0 0 0.2rem;text-transform:uppercase;letter-spacing:1px;">⚡ Limited Availability</p>
           <p style="color:#ccc;font-size:0.9rem;margin:0;">We onboard a limited number of new clients each quarter to guarantee quality. Spots for Q2 2026 are filling fast.</p>
         </div>
       </div>
@@ -1507,16 +1507,16 @@
         <h6>Contact Us</h6>
         <div style="font-size:0.9rem;color:#aaa;line-height:1.9;">
           <p style="margin-bottom:0.8rem;">
-            <i class="bi bi-building me-2" style="color:var(--amazon-orange);"></i>
+            <i class="bi bi-building me-2" style="color:var(--primary-gold);"></i>
             <strong style="color:#ddd;">Global Product Trading Srls</strong>
           </p>
           <p style="margin-bottom:0.8rem;">
-            <i class="bi bi-geo-alt me-2" style="color:var(--amazon-orange);"></i>
+            <i class="bi bi-geo-alt me-2" style="color:var(--primary-gold);"></i>
             Wolfgang Goethe 551<br>
             <span style="padding-left:1.5rem;">Sanremo 18038, Imperia, IT</span>
           </p>
           <p style="margin-bottom:1.2rem;">
-            <i class="bi bi-envelope me-2" style="color:var(--amazon-orange);"></i>
+            <i class="bi bi-envelope me-2" style="color:var(--primary-gold);"></i>
             <a href="mailto:info@gptsrl.com" style="color:#aaa;display:inline;">info@gptsrl.com</a>
           </p>
         </div>
